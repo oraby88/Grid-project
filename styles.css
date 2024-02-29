@@ -1,0 +1,232 @@
+body {
+  box-sizing: border-box;
+  /* margin: 0 auto; */
+  padding: 0;
+  background-color: rgb(248, 247, 247);
+  font-family: sans-serif;
+}
+.container1 {
+  max-width: 90%;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+  /* transition: all 2s; */
+}
+.humbrger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 30px;
+  text-align: right;
+  /* transition: all 2s; */
+}
+.navWords {
+  display: flex;
+  align-items: center;
+  text-align: left; 
+  justify-content: space-between;
+  gap: 16px;
+  /* width: 40%; */
+}
+.navWords p:nth-child(1) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.navWords p:nth-child(2) {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: white;
+  padding: 5px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px white;
+}
+.navIcons {
+  display: flex;
+  width: 50%;
+  text-align: right;
+  transition: all 2s ease;
+}
+.list{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0;
+}
+.navIcons img {
+  width: 30px;
+  height: 30px;
+}
+.list li,
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 0.8rem;
+  width: 10%;
+}
+
+.container {
+  display: grid;
+  /* grid-template-columns: 2fr 1fr; */
+  gap: 16px;
+  grid-template-areas:
+    "eth eth alphabet"
+    "eth eth traveler"
+    "astro cube traveler"
+    "cup insta insta"
+    "foma foma dimensional";
+  max-width: 90%;
+  margin: 0 auto;
+}
+.img1 {
+  grid-area: eth;
+}
+.img2 {
+  grid-area: alphabet;
+}
+.img3 {
+  grid-area: traveler;
+}
+.img4 {
+  grid-area: astro;
+}
+.img5 {
+  grid-area: cube;
+}
+.img6 {
+  grid-area: cup;
+}
+.img7 {
+  grid-area: insta;
+}
+.img8 {
+  grid-area: foma;
+}
+.img9 {
+  grid-area: dimensional;
+}
+.project {
+  position: relative;
+  /* width: 500px; */
+}
+.project img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.project .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s ease;
+  letter-spacing: 2px;
+}
+.project .overlay:hover {
+  opacity: 1;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+.bar {
+  width: 40px;
+  height: 4px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+footer {
+  text-align: center;
+  padding: 64px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .container1 {
+    max-width: 100%;
+  }
+  .container {
+    max-width: 100%;
+    grid-template-areas:
+      "eth eth"
+      "alphabet traveler"
+      "astro cube"
+      "insta insta"
+      "cup foma"
+      "dimensional dimensional";
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "eth eth"
+      "alphabet alphabet"
+      "traveler traveler"
+      "astro cube"
+      "insta insta"
+      "cup cup"
+      "foma foma"
+      "dimensional dimensional";
+  }
+  .container .overlay {
+    font-size: 1.2rem;
+  }
+  footer {
+    padding: 32px;
+    font-size: 14px;
+  }
+  .navIcons {
+    display: none;
+    padding: 16px 24px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+  }
+  .humbrger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navIcons.active{
+    display: flex;
+    /* flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 100px;
+    left: 80%;
+    right: 0;
+    padding: 0;
+    /* transition: all 2s; */
+    .list{
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  .navWords p:nth-child(1) {
+    font-size: 1rem;
+  }
+}
